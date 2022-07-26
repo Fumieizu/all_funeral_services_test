@@ -4,6 +4,8 @@ $basic-green: #82B284;
 $basic-red: #D95151;
 $basic-white: #FFFFFF;
 $basic-grey: #F7F7F7;
+$basic-shadow: #00000026;
+$basic-overlay: rgba( 0, 0, 0, 0.60 );
 
 $secondary-black: #808080;
 $secondary-green: #98C88C;
@@ -13,3 +15,12 @@ $third-black: #CDCDCD;
 $third-green: #58A742;
 $third-grey: #B9B9B9;
 
+$fourth-green: #A4C7A5;
+$fourth-grey: #EEEEEE;
+$fourth-black: #222222;
+
+$fifth-gray: #FFFFFF2D;
+
+$transition-duration: 0.4s;
+$transition-function: ease;
+$transition: $transition-duration $transition-function;

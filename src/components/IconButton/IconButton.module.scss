@@ -1,0 +1,7 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.IconButton {
+  @include icon-button;
+  margin-left: 16px;
+}

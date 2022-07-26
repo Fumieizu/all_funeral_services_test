@@ -1,0 +1,36 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.Container {
+  @include container;
+}
+
+.TitleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Title {
+  @include company-title;
+}
+
+.Table {
+  margin-top: 8px;
+  border-spacing: 0 10px;
+}
+
+.Table_Field {
+  width: 162px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.25px;
+}
+
+.Table_Value {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22%;
+  letter-spacing: 0.25px;
+}

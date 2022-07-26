@@ -1,0 +1,129 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.Container {
+  @include container;
+  margin-bottom: 0;
+}
+
+.TitleWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Title {
+  @include company-title;
+}
+
+.List {
+  @include list-style-none;
+  display: flex;
+  margin: 20px 0 20px;
+}
+
+.List_item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:not(:first-child) {
+    margin-left: 24px;
+  }
+}
+
+.List_itemInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.List_itemInfo_text,
+.List_itemInfo_date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.List_itemInfo_text {
+  margin: 8px 0 0;
+}
+
+.List_itemInfo_date {
+  margin-top: 4px;
+  color: $secondary-black;
+}
+
+.AddButton {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  justify-content: center;
+  background: transparent;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  border: 1px solid $secondary-grey;
+  border-radius: 2px;
+  outline: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: $basic-green;
+  padding: 10px 12px;
+  transition: fill $transition, color $transition, border-color $transition;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    border-color: $third-black;
+    color: $secondary-green;
+    path {
+      fill: $secondary-green;
+    }
+  }
+
+  &:active {
+    border-color: $third-black;
+    color: $third-green;
+    path {
+      fill: $third-green;
+    }
+  }
+
+  &_icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  }
+}
+
+.DeleteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: $basic-red;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.Empty {
+  height: 204px;
+  margin: 20px 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Empty_Text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  margin: 0;
+}

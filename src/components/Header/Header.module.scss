@@ -1,0 +1,40 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 26px 28px 26px 40px;
+  min-width: 100%;
+
+  border-bottom: 1px solid $fourth-grey;
+}
+
+.Button {
+  margin: 0;
+}
+
+.Content_Wrapper {
+  display: flex;
+
+  .Button__Arrow {
+    margin-left: 0;
+  }
+}
+
+.Content_Wrapper__Tools {
+  .Button:not(:first-child) {
+    margin-left: 23px;
+  }
+}
+
+.Text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0 0 0 16px;
+  color: $basic-green;
+  letter-spacing: -0.6px;
+}

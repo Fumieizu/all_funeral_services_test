@@ -1,0 +1,69 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.Input {
+  height: 40px;
+  min-width: 400px;
+  outline: none;
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 12px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $secondary-black;
+  text-transform: uppercase;
+  border: 1px solid $third-black;
+  border-radius: 2px;
+  position: relative;
+  transition: border-color $transition;
+
+  &:hover {
+    border-color: $secondary-black;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $basic-black;
+  }
+}
+
+.Label {
+  position: relative;
+}
+
+.Input__title {
+  text-transform: none;
+  color: $basic-black;
+}
+
+.Input_Text {
+  position: absolute;
+  top: -5px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  background: $basic-white;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: $secondary-black;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.Input_Alert {
+  position: absolute;
+  bottom: -16px;
+  left: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: $basic-red;
+  z-index: 1;
+}

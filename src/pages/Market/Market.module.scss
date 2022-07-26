@@ -1,0 +1,38 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.Container {
+  margin-left: 48px;
+  height: calc(100% + 128px);
+  display: flex;
+}
+
+.MainContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ContentWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 40px;
+}
+
+.TitleContainer {
+  display: flex;
+  margin: 0 0 24px 0;
+}
+
+.Title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: $fourth-black;
+  margin: 0;
+}
+
+.EditButton {
+  margin-left: 12px;
+}

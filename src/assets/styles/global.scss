@@ -20,6 +20,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   min-width: 1020px;
+  color: $basic-black;
 }
 
 .visually-hidden {
@@ -33,9 +34,6 @@ body {
   clip: rect(0 0 0 0);
 }
 
-.root {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
+#root {
+  height: 100vh;
 }

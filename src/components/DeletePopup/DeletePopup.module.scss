@@ -1,0 +1,66 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.Container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 198px;
+  padding: 24px 24px;
+  display: flex;
+  flex-direction: column;
+  background: $basic-white;
+  box-shadow: 0 5px 40px $basic-shadow;
+}
+
+.Title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0 0 16px 0;
+}
+
+.Text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.Button {
+  padding: 0;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: $third-grey;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity $transition;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &:active {
+    opacity: 1.2;
+  }
+
+  &__delete {
+    color: $basic-green;
+  }
+}
