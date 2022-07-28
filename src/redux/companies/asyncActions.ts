@@ -6,6 +6,7 @@ import { ICompanyFields, IContactsFields } from './types';
 export const fetchAuth = createAsyncThunk(ApiRoutes.Auth, async (name: string) => {
   const result = await axios.get(`${ApiRoutes.Auth}/?user=${name}`);
   window.localStorage.setItem('token', result.headers.authorization);
+  axios.defaults.headers.common['Authorization'] = result.headers.authorization;
 });
 
 export const fetchCompanies = createAsyncThunk(`${ApiRoutes.Companies}/get`, async (id: string) => {

@@ -23,6 +23,7 @@ import {
   getContactsStatus,
   getError,
   getImageStatus,
+  getIsAuth,
 } from '../../redux/companies/selectors';
 import { setAuth } from '../../redux/companies/companiesSlice';
 import { COMPANY_MOCK_ID } from '../../common/const';
@@ -37,6 +38,7 @@ export const Market: React.FC = () => {
   const error = useAppSelector(getError);
   const isCompanyLoading = useAppSelector(getCompanyIsLoading);
   const isContactsLoading = useAppSelector(getContactsIsLoading);
+  const isAuth = useAppSelector(getIsAuth);
 
   const isDataLoading = isCompanyLoading && isContactsLoading;
   const isError =
@@ -74,15 +76,20 @@ export const Market: React.FC = () => {
     } else {
       dispatch(setAuth());
     }
-    dispatch(fetchCompanies(COMPANY_MOCK_ID));
   }, [dispatch]);
 
   useEffect(() => {
+    if (isAuth) {
+      dispatch(fetchCompanies(COMPANY_MOCK_ID));
+    }
+  }, [dispatch, isAuth]);
+
+  useEffect(() => {
     const id = company?.contactId;
-    if (id) {
+    if (id && isAuth) {
       dispatch(fetchContacts(id));
     }
-  }, [company?.contactId, dispatch]);
+  }, [company?.contactId, dispatch, isAuth]);
 
   useEffect(() => {
     if (company && companyStatus === 'success' && !error) {
