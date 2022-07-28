@@ -2,6 +2,9 @@
 @import 'src/assets/styles/mixins.scss';
 
 .Container {
+  position: sticky;
+  top: 0;
+  background-color: $basic-white;
   display: flex;
   align-items: center;
   justify-content: space-between;

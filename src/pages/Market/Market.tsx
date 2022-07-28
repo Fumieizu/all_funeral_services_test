@@ -29,6 +29,7 @@ import { setAuth } from '../../redux/companies/companiesSlice';
 import { COMPANY_MOCK_ID } from '../../common/const';
 import { Loader } from '../../components/Loader';
 import { Toast } from '../../components/Toast';
+import { Footer } from '../../components/Footer';
 
 export const Market: React.FC = () => {
   const company = useAppSelector((state) => getCompanyById(state, COMPANY_MOCK_ID));
@@ -98,7 +99,7 @@ export const Market: React.FC = () => {
   }, [company, error, companyStatus]);
 
   return (
-    <section className={styles.Container}>
+    <main className={styles.Container}>
       <SubMenu />
       <div className={styles.MainContent}>
         {!isDataLoading ? (
@@ -132,11 +133,12 @@ export const Market: React.FC = () => {
               ) : (
                 <h2>не найдено информации о компании</h2>
               )}
+              <Footer />
             </div>
           </>
         )}
       </div>
       <>{isError && <Toast />}</>
-    </section>
+    </main>
   );
 };
